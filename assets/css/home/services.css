@@ -1,0 +1,166 @@
+/* ============================================
+   SERVICES — DEBARENOV (Dark Premium)
+============================================ */
+
+.services-debarenov {
+  background: var(--anthracite);
+  color: #fff;
+  padding: 6rem 0;
+}
+
+.services-debarenov .container {
+  max-width: 1200px;
+}
+
+/* ---------- Header ---------- */
+
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.dark .tag {
+  display: inline-block;
+  background: transparent; /* pas de fond ou anthracite pur */
+  color: #fff; /* texte blanc */
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border: 1.5px solid #fff; /* bordure blanche premium */
+}
+
+.services-header h2 {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.services-intro {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: #dcdcdc;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* ---------- TAG personnalisé (charte Debarenov) ---------- */
+
+.services-debarenov .tag {
+  display: inline-block;
+  background: var(--or); /* or de ta charte */
+  color: #fff;
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* ---------- GRID ---------- */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* ---------- Service Card ---------- */
+
+.service-card {
+  background: #1e1e1e;
+  padding: 2.4rem 1.8rem;
+  border-radius: 18px;
+  text-align: left;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  border-color: var(--or);
+}
+
+/* Icone */
+
+.service-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Titre */
+
+.service-card h3 {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 700;
+  font-size: 1.45rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+/* Description */
+
+.service-card p {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 300;
+  font-size: 1.05rem;
+  color: #cfcfcf;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Lien */
+
+.service-link {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 500;
+  color: var(--or);
+  text-decoration: none;
+  transition: 0.25s ease;
+  font-size: 1rem;
+}
+
+.service-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.service-card:hover .service-icon svg {
+  stroke: #d8a648;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 2rem 1.4rem;
+  }
+
+  .services-header h2 {
+    font-size: 2rem;
+  }
+
+  .services-intro {
+    font-size: 1rem;
+  }
+}

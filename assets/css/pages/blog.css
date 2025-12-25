@@ -1,0 +1,29 @@
+#hero-blog {
+  position: relative;
+  width: 100vw;
+  height: 95vh;
+
+  left: 50%;
+  margin-left: -50vw;
+
+  background: url('./../../img/blog/blog-hero.png') center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ✅ Overlay blanc luxe */
+#hero-blog::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* ajuste ici */
+  z-index: 1;
+}
+
+/* ✅ Contenu au-dessus */
+#hero-blog > * {
+  position: relative;
+  z-index: 2;
+}

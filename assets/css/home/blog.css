@@ -1,0 +1,126 @@
+/* =============================================
+   BLOG SECTION — DEBARENOV (FOND BLANC)
+============================================= */
+
+.blog-section {
+  padding: 90px 0;
+  background: #ffffff; /* FOND BLANC */
+}
+
+/* HEADER */
+.blog-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.blog-title {
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #1c1c1c; /* anthracite/noir */
+  margin-bottom: 10px;
+}
+
+.blog-subtitle {
+  font-size: 1rem;
+  color: #555; /* gris plus lisible sur blanc */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* TAG BADGE (comme syndic & copro) */
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+   background: var(--anthracite);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-family: var(--font-title);
+  margin-bottom: 16px;
+}
+
+/* GRID */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 35px;
+}
+
+/* CARDS */
+.blog-card {
+  background: #ffffff; /* carte blanche */
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(0,0,0,0.08); /* subtil, haut de gamme */
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.12); /* ombre premium */
+}
+
+/* IMAGE */
+.blog-img img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.blog-content {
+  padding: 22px;
+}
+
+.blog-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-family: var(--font-title);
+  color: #1c1c1c; /* anthracite */
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  color: #555; /* gris lisible sur blanc */
+  margin-bottom: 18px;
+}
+
+.blog-link {
+  color: #1c1c1c;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.blog-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* CTA — VOIR TOUS LES ARTICLES */
+.blog-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.btn-readmore {
+  padding: 12px 28px;
+  border: 1px solid #1c1c1c;
+  color: #1c1c1c;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.btn-readmore:hover {
+  background: #1c1c1c;
+  color: #ffffff;
+}

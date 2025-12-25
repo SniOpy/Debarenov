@@ -1,0 +1,175 @@
+/* ============================================
+    REN-01 : HERO SPÉCIFIQUE
+============================================ */
+.renovation-header {
+  background: url('https://picsum.photos/1600/600?random=7') center center / cover no-repeat;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: var(--white);
+  padding: 3rem 0;
+
+  /* Overlay Anthracite/sombre pour le contraste */
+  background-color: rgba(31, 41, 51, 0.6);
+  background-blend-mode: overlay;
+}
+
+.renovation-header .hero-content {
+  max-width: 800px;
+}
+
+.renovation-header h1 {
+  color: var(--white);
+  font-size: calc(var(--h1-size) * 1.2); /* Titre plus grand pour une page clé */
+  line-height: 1.1;
+  margin-top: 1rem;
+}
+
+.renovation-header p {
+  color: var(--gris-clair);
+  font-size: var(--text-medium);
+  font-weight: var(--fw-light);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* Tag et Bouton spécifiques */
+.tag-white {
+  background: var(--white);
+  color: var(--anthracite);
+  padding: 0.4rem 1rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+}
+
+.btn-primary-renov {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--anthracite);
+  font-weight: var(--fw-bold);
+  padding: 1rem 2rem;
+}
+
+.btn-primary-renov:hover {
+  background: var(--gris-hover);
+  border-color: var(--gris-hover);
+}
+
+/* ============================================
+    REN-02 : DOMAINES D'EXPERTISE (Expertise Grid)
+============================================ */
+.expertise-section {
+  padding: 6rem 0;
+  background-color: var(--white);
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+  margin-top: 3rem;
+}
+
+.expertise-item {
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid var(--gris-clair);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.expertise-item:hover {
+  background-color: var(--gris-clair);
+}
+
+.expertise-item .icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.expertise-item h3 {
+  color: var(--anthracite);
+  margin-bottom: 0.5rem;
+}
+
+.expertise-item p {
+  font-size: var(--text-size);
+  color: var(--gris);
+}
+
+/* ============================================
+    REN-03 : PROCESSUS DE RENOVATION (Process Step)
+============================================ */
+.process-section {
+  padding: 6rem 0;
+  background-color: var(--anthracite);
+  color: var(--white);
+  text-align: center;
+}
+
+.process-section .section-title {
+  margin-bottom: 4rem;
+}
+
+.title-white {
+  color: var(--white) !important;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.05); /* Arrière-plan subtil sur Anthracite */
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  border-top: 4px solid var(--white); /* Ligne de séparation blanche */
+}
+
+.step-number {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.step-card p {
+  color: var(--gris);
+  font-size: var(--text-small);
+  line-height: 1.5;
+}
+
+/* ============================================
+    REN-04 : RESPONSIVE DESIGN
+============================================ */
+@media (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .renovation-header h1 {
+    font-size: var(--h1-size);
+  }
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}

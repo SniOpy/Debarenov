@@ -1,0 +1,163 @@
+/* ============================================
+   IMPORTS GLOBAUX — RESPECTER CET ORDRE !!!
+============================================ */
+
+/* 1 — Polices */
+@import url('./assets/fonts/fonts.css');
+
+/* 2 — Variables */
+@import url('./assets/css/variables.css');
+
+/* 3 — Sections */
+@import url('./assets/css/home/header.css');
+@import url('./assets/css/home/hero.css');
+@import url('./assets/css/home/about.css');
+@import url('./assets/css/home/services.css');
+@import url('./assets/css/home/copro.css');
+@import url('./assets/css/home/separator.css');
+@import url('./assets/css/home/reasons.css');
+@import url('./assets/css/home/gallery.css');
+@import url('./assets/css/home/reviews.css');
+@import url('./assets/css/home/blog.css');
+@import url('./assets/css/home/contact.css');
+@import url('./assets/css/home/cta-home.css');
+@import url('./assets/css/home/footer.css');
+@import url('./assets/css/pages/renovation.css');
+@import url('./assets/css/pages/devis.css');
+@import url('./assets/css/pages/blog.css');
+@import url('./assets/css/pages/articles.css');
+
+/* ============================================
+   RESET GLOBAL
+============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   TYPOGRAPHIE GLOBALE
+============================================ */
+
+html,
+body {
+  font-family: 'Ranade', sans-serif;
+}
+
+/* TITRES */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--black);
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-weight: var(--fw-bold);
+  font-size: var(--h1-size);
+  line-height: var(--lh-title);
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-weight: var(--fw-bold);
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-family: var(--font-title);
+  font-weight: var(--fw-bold);
+  font-size: var(--h3-size);
+}
+
+/* TEXTES */
+p {
+  font-family: var(--font-text);
+  font-size: var(--text-size);
+  font-weight: var(--fw-light);
+  color: var(--black);
+  line-height: var(--lh-default);
+}
+
+/* BOUTONS */
+button,
+.btn {
+  font-family: var(--font-subtitle);
+  font-size: var(--text-size);
+  font-weight: var(--fw-regular);
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  background: var(--btn-bg);
+  color: var(--white);
+  border: 1px solid var(--btn-border);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+/* FORMULAIRES */
+input,
+textarea,
+select {
+  font-family: var(--font-text);
+  font-size: var(--text-size);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--black);
+  background: transparent;
+  color: var(--black);
+}
+
+input::placeholder {
+  color: #777;
+}
+
+/* CONTAINER */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ===============================
+   ANIMATIONS FADE — ORIGINAL
+================================ */
+
+/* Base */
+[data-anim] {
+  opacity: 0;
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+/* Fade bas -> haut */
+[data-anim='fade'],
+[data-anim='fade-bottom'] {
+  transform: translateY(40px);
+}
+
+/* Fade gauche -> droite */
+[data-anim='fade-left'] {
+  transform: translateX(-40px);
+}
+
+/* Fade droite -> gauche */
+[data-anim='fade-right'] {
+  transform: translateX(40px);
+}
+
+/* Visible */
+[data-anim].visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}

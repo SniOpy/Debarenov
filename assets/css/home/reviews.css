@@ -1,0 +1,98 @@
+/* =============================================
+   REVIEWS — DEBARENOV (LUXE)
+============================================= */
+
+.reviews-section {
+  padding: 90px 0;
+  background: #1c1c1c;
+  color: #ffffff;
+}
+
+/* HEADER */
+.reviews-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.google-logo {
+  width: 48px;
+  margin-bottom: 12px;
+}
+
+.reviews-title {
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.reviews-subtitle {
+  color: #bdbdbd;
+  font-size: 1rem;
+}
+
+/* GRID */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 35px;
+}
+
+/* CARD */
+.review-card {
+  background: #111111;
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* STARS */
+.stars img {
+  width: 20px;
+  margin-right: 2px;
+  display: inline-block;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #dddddd;
+  margin: 14px 0 10px 0;
+  line-height: 1.5;
+}
+
+.review-author {
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+/* CTA — GOOGLE REVIEWS */
+.reviews-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.btn-gmb {
+  padding: 14px 32px;
+  background: #ffffff;
+  color: #1c1c1c;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.25s ease;
+}
+
+.btn-gmb:hover {
+  background: #e5e5e5;
+}

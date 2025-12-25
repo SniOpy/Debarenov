@@ -1,0 +1,208 @@
+/* HERO FULLSCREEN */
+.hero-debarenov {
+  position: relative;
+  width: 100vw;
+  height: 95vh;
+
+  left: 50%;
+  margin-left: -50vw;
+
+  background: url('./../../img/hero/salon-lumineux-noir.jpg') top/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* GRID : texte + colonne vide */
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Colonne texte */
+.hero-text {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffffba;
+  padding: 52px 50px;
+  border-radius: 10px;
+}
+
+/* Colonne vide */
+.hero-empty {
+  width: 100%;
+}
+
+/* TITRES */
+.hero-debarenov h1 {
+  font-family: 'Ranade', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  font-family: 'Ranade', sans-serif;
+  font-size: 1.4rem;
+  color: #000;
+}
+
+/* DESCRIPTION */
+.hero-description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #111;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* CTA */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+/* BUTTONS */
+.hero-btn {
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+/* Devis */
+.hero-btn-primary {
+  background: var(--anthracite);
+  color: #fff;
+}
+.hero-btn-primary:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* Appeler maintenant */
+.hero-btn-secondary {
+  background: transparent;
+  border: 1.5px solid #000;
+  color: #000;
+}
+.hero-btn-secondary:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-empty {
+    display: none;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-debarenov h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-cta-group {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   GLOBAL FIX for HERO MOBILE
+=========================== */
+
+/* Empêche le débordement sur mobile */
+.hero-debarenov {
+  height: 95vh; /* au lieu de 95vh sur mobile */
+  padding: 4rem 0;
+}
+
+/* Pour tablette */
+@media (max-width: 900px) {
+  .hero-debarenov {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-text {
+    padding: 35px 30px; /* réduit */
+  }
+
+  .hero-debarenov h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Pour mobile */
+@media (max-width: 600px) {
+  .hero-debarenov {
+    height: auto; /* important */
+    padding: 3.5rem 0 3rem;
+  }
+
+  .hero-text {
+    padding: 25px 20px;
+    gap: 0.7rem;
+    background: #ffffffd3;
+  }
+
+  .hero-debarenov h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

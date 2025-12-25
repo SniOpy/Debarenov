@@ -1,0 +1,118 @@
+/* =============================================
+   SECTION GALLERY — DEBARENOV
+============================================= */
+
+.gallery-section {
+  padding: 80px 0;
+  background: #1c1c1c;
+  color: #ffffff;
+}
+
+.gallery-title {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.gallery-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  font-size: 1rem;
+  color: #bdbdbd;
+}
+
+/* GRID */
+.slider-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* =============================================
+   BEFORE / AFTER SLIDER
+============================================= */
+
+.before-after-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #111111;
+  box-shadow: 0 0 18px rgba(0,0,0,0.35);
+}
+
+.before-after-container img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Image avant (full) */
+.before-img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image après (coupée selon slider) */
+.after-img {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  overflow: hidden;
+  clip-path: inset(0 50% 0 0);
+  z-index: 2;
+  transition: clip-path 0.2s ease-out;
+}
+
+/* Barre centrale */
+.slider-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #ffffff;
+  z-index: 3;
+}
+
+/* HANDLE — cercle du slider */
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 15px);
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  cursor: grab;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* LABELS */
+.label {
+  position: absolute;
+  top: 12px;
+  padding: 6px 14px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(0,0,0,0.65);
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-title);
+  z-index: 5;
+}
+
+.label-avant {
+  left: 12px;
+}
+
+.label-apres {
+  right: 12px;
+}

@@ -1,0 +1,215 @@
+/* ============================================
+   VARIABLES & RESET
+============================================ */
+:root {
+  --white: #ffffff;
+  --anthracite: #1f2933;
+  --noir: #000000;
+  --gris-clair: #f5f5f5;
+  --gris-hover: #e6e6e6;
+  --container-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ============================================
+   CONTAINER
+============================================ */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header-debarenov {
+  background: var(--white);
+  padding: 0.9rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.header-logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* ============================================
+   NAV DESKTOP
+============================================ */
+.main-nav > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.main-nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--anthracite);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.2rem 0;
+  transition: color 0.25s ease;
+}
+
+/* UNDERLINE FLUIDE DESKTOP */
+@media (min-width: 601px) {
+  .main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--noir);
+    transition: width 0.3s ease;
+  }
+
+  .main-nav a:hover::after {
+    width: 100%;
+  }
+}
+
+.main-nav a:hover {
+  color: var(--noir);
+}
+
+/* ============================================
+   SUBMENU DESKTOP — CORRIGÉ
+============================================ */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%; /* Supprime l’espace mort */
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background: var(--white);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  z-index: 1100;
+}
+
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: var(--anthracite);
+}
+
+.submenu li a:hover {
+  background: var(--gris-clair);
+  color: var(--noir);
+}
+
+/* ============================================
+   BURGER — DESKTOP HIDDEN
+============================================ */
+.nav-toggle {
+  display: none;
+}
+
+/* ============================================
+   MOBILE & TABLET
+============================================ */
+@media (max-width: 1024px) {
+  /* Désactive le hover sur mobile/tablette */
+  .has-submenu:hover > .submenu {
+    display: none !important;
+  }
+
+  .submenu {
+    position: static;
+    display: none;
+    background: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: none;
+    padding-left: 0;
+  }
+
+  .submenu.open {
+    display: block !important;
+  }
+
+  .submenu li a {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    width: 26px;
+    height: 3px;
+    background: var(--anthracite);
+    border-radius: 3px;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .main-nav.open {
+    max-height: 100vh;
+  }
+
+  .main-nav > ul {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .main-nav a {
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+  }
+
+  .main-nav a::after {
+    display: none;
+  }
+}

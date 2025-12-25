@@ -1,0 +1,19 @@
+.dark-separator {
+  height: 150px;
+  background: var(--anthracite);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGO VISIBILE AU CENTRE */
+.separator-logo {
+  width: 48px;
+  height: auto;
+  opacity: 1;
+  z-index: 10;
+  filter: brightness(0) invert(1);
+}
