@@ -558,7 +558,7 @@ Nous avons récupéré le bien propre et dans les délais annoncés au départ.
       <div class="contact-box" data-anim="fade-right">
         <h3>Contactez-nous</h3>
 
-        <form id="contact-form" class="contact-form" method="POST" action="send.php" onsubmit="return false;">
+        <form id="contact-form" class="contact-form" method="POST" action="api/send.php" onsubmit="return false;">
           <div class="form-group">
             <label>Nom *</label>
             <input type="text" name="nom" placeholder="Votre nom" required />

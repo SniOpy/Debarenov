@@ -1,6 +1,9 @@
 User-agent: *
 Disallow: /data/
 Disallow: /phpmailer/
-Disallow: /send.php
+Disallow: /api/
+Disallow: /admin/
+Disallow: /cache/
+Disallow: /includes/
 
 Sitemap: https://debarenov.fr/sitemap.xml

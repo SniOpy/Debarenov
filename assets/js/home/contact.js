@@ -41,7 +41,7 @@ if (form) {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("send.php", {
+      const response = await fetch("api/send.php", {
         method: "POST",
         body: formData,
       });

@@ -41,8 +41,42 @@
 
     <div class="footer-bottom">
       <p>© 2025 Debarenov – Tous droits réservés.</p>
+      <div class="footer-legal-links">
+        <a href="<?= $BASE_URL ?>sitemap">Plan du site</a>
+        <a href="<?= $BASE_URL ?>conditions-generales">Conditions générales de service</a>
+        <a href="<?= $BASE_URL ?>mentions-legales">Mentions légales</a>
+        <a href="<?= $BASE_URL ?>politique-confidentialite">Politique de confidentialité</a>
+        <a href="<?= $BASE_URL ?>gestion-cookies">Gestion des cookies</a>
+      </div>
     </div>
   </footer>
+
+  <!-- ============================
+      BANDEAU CONSENTEMENT COOKIES
+  ============================ -->
+  <div id="cookie-banner" style="display: none;">
+    <div class="cookie-banner-content">
+      <div class="cookie-banner-text">
+        <p>
+          Ce site utilise des cookies pour améliorer votre expérience de navigation et analyser le trafic. 
+          En cliquant sur "Tout accepter", vous acceptez l'utilisation de tous les cookies. 
+          Vous pouvez également <a href="<?= $BASE_URL ?>gestion-cookies">personnaliser vos préférences</a> 
+          ou consulter notre <a href="<?= $BASE_URL ?>politique-confidentialite">politique de confidentialité</a>.
+        </p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">
+          Tout accepter
+        </button>
+        <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary">
+          Tout refuser
+        </button>
+        <button id="cookie-customize" class="cookie-btn cookie-btn-outline">
+          Personnaliser
+        </button>
+      </div>
+    </div>
+  </div>
 
    <!-- SCRIPTS -->
     <script src="./assets/js/script.js" type="module"></script>
