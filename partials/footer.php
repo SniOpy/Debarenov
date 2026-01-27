@@ -52,6 +52,15 @@
   </footer>
 
   <!-- ============================
+      BOUTON SCROLL TO TOP
+  ============================ -->
+  <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Remonter en haut de la page">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 5L5 10L6.41 11.41L10 7.83L13.59 11.41L15 10L10 5Z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <!-- ============================
       BANDEAU CONSENTEMENT COOKIES
   ============================ -->
   <div id="cookie-banner" style="display: none;">

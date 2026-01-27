@@ -86,86 +86,106 @@
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Récupérer le consentement actuel
-  function getCookieConsent() {
-    const consentCookie = document.cookie.split(';').find(c => c.trim().startsWith('debarenov_cookie_consent='));
-    if (!consentCookie) return null;
-    try {
-      return JSON.parse(decodeURIComponent(consentCookie.split('=')[1]));
-    } catch (e) {
-      return null;
+(function() {
+  // Fonction d'initialisation
+  function initCookieManagement() {
+    // Récupérer le consentement actuel
+    function getCookieConsent() {
+      const consentCookie = document.cookie.split(';').find(c => c.trim().startsWith('debarenov_cookie_consent='));
+      if (!consentCookie) return null;
+      try {
+        return JSON.parse(decodeURIComponent(consentCookie.split('=')[1]));
+      } catch (e) {
+        return null;
+      }
     }
+
+    const analyticsToggle = document.getElementById('toggle-analytics');
+    const marketingToggle = document.getElementById('toggle-marketing');
+    const labelAnalytics = document.getElementById('label-analytics');
+    const labelMarketing = document.getElementById('label-marketing');
+    const saveBtn = document.getElementById('save-cookie-preferences');
+    const messageDiv = document.getElementById('cookie-save-message');
+
+    // Vérifier que tous les éléments existent
+    if (!analyticsToggle || !marketingToggle || !labelAnalytics || !labelMarketing || !saveBtn || !messageDiv) {
+      // Réessayer après un court délai si les éléments ne sont pas encore chargés
+      setTimeout(initCookieManagement, 100);
+      return;
+    }
+
+    const consent = getCookieConsent();
+
+    // Initialiser les toggles selon le consentement actuel
+    if (consent) {
+      if (consent.analytics) {
+        analyticsToggle.classList.add('active');
+        if (labelAnalytics) labelAnalytics.textContent = 'Activé';
+      }
+      if (consent.marketing) {
+        marketingToggle.classList.add('active');
+        if (labelMarketing) labelMarketing.textContent = 'Activé';
+      }
+    }
+
+    // Gestion du toggle analytics
+    analyticsToggle.addEventListener('click', () => {
+      analyticsToggle.classList.toggle('active');
+      if (labelAnalytics) {
+        labelAnalytics.textContent = analyticsToggle.classList.contains('active') ? 'Activé' : 'Désactivé';
+      }
+    });
+
+    // Gestion du toggle marketing
+    marketingToggle.addEventListener('click', () => {
+      marketingToggle.classList.toggle('active');
+      if (labelMarketing) {
+        labelMarketing.textContent = marketingToggle.classList.contains('active') ? 'Activé' : 'Désactivé';
+      }
+    });
+
+    // Sauvegarder les préférences
+    saveBtn.addEventListener('click', () => {
+      const preferences = {
+        analytics: analyticsToggle.classList.contains('active'),
+        marketing: marketingToggle.classList.contains('active')
+      };
+
+      // Sauvegarder dans un cookie
+      const consentData = {
+        essential: true,
+        analytics: preferences.analytics,
+        marketing: preferences.marketing,
+        date: new Date().toISOString()
+      };
+
+      const date = new Date();
+      date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+      const expires = 'expires=' + date.toUTCString();
+      document.cookie = 'debarenov_cookie_consent=' + encodeURIComponent(JSON.stringify(consentData)) + ';' + expires + ';path=/;SameSite=Lax';
+
+      // Afficher le message de confirmation
+      if (messageDiv) {
+        messageDiv.style.display = 'block';
+        messageDiv.style.background = '#d4edda';
+        messageDiv.style.color = '#155724';
+        messageDiv.style.border = '1px solid #c3e6cb';
+        messageDiv.textContent = '✓ Vos préférences ont été enregistrées avec succès. La page va se recharger...';
+      }
+
+      // Recharger la page pour appliquer les changements
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    });
   }
 
-  const consent = getCookieConsent();
-  const analyticsToggle = document.getElementById('toggle-analytics');
-  const marketingToggle = document.getElementById('toggle-marketing');
-  const labelAnalytics = document.getElementById('label-analytics');
-  const labelMarketing = document.getElementById('label-marketing');
-  const saveBtn = document.getElementById('save-cookie-preferences');
-  const messageDiv = document.getElementById('cookie-save-message');
-
-  // Initialiser les toggles selon le consentement actuel
-  if (consent) {
-    if (consent.analytics) {
-      analyticsToggle.classList.add('active');
-      labelAnalytics.textContent = 'Activé';
-    }
-    if (consent.marketing) {
-      marketingToggle.classList.add('active');
-      labelMarketing.textContent = 'Activé';
-    }
+  // Initialiser dès que le DOM est prêt
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCookieManagement);
+  } else {
+    // DOM déjà chargé
+    initCookieManagement();
   }
-
-  // Gestion du toggle analytics
-  analyticsToggle.addEventListener('click', () => {
-    analyticsToggle.classList.toggle('active');
-    labelAnalytics.textContent = analyticsToggle.classList.contains('active') ? 'Activé' : 'Désactivé';
-  });
-
-  // Gestion du toggle marketing
-  marketingToggle.addEventListener('click', () => {
-    marketingToggle.classList.toggle('active');
-    labelMarketing.textContent = marketingToggle.classList.contains('active') ? 'Activé' : 'Désactivé';
-  });
-
-  // Sauvegarder les préférences
-  saveBtn.addEventListener('click', () => {
-    const preferences = {
-      analytics: analyticsToggle.classList.contains('active'),
-      marketing: marketingToggle.classList.contains('active')
-    };
-
-    // Sauvegarder dans un cookie
-    const consentData = {
-      essential: true,
-      analytics: preferences.analytics,
-      marketing: preferences.marketing,
-      date: new Date().toISOString()
-    };
-
-    const date = new Date();
-    date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-    const expires = 'expires=' + date.toUTCString();
-    document.cookie = 'debarenov_cookie_consent=' + encodeURIComponent(JSON.stringify(consentData)) + ';' + expires + ';path=/;SameSite=Lax';
-
-    // Recharger les scripts selon les nouvelles préférences
-    // Le cookieManager sera chargé via script.js, donc on recharge la page pour appliquer les changements
-    setTimeout(() => {
-      window.location.reload();
-    }, 1000);
-
-    // Afficher le message de confirmation
-    messageDiv.style.display = 'block';
-    messageDiv.style.background = '#d4edda';
-    messageDiv.style.color = '#155724';
-    messageDiv.style.border = '1px solid #c3e6cb';
-    messageDiv.textContent = '✓ Vos préférences ont été enregistrées avec succès.';
-    
-    setTimeout(() => {
-      messageDiv.style.display = 'none';
-    }, 5000);
-  });
-});
+})();
 </script>

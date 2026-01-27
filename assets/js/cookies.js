@@ -145,12 +145,23 @@ class CookieManager {
    */
   showBanner() {
     const banner = document.getElementById('cookie-banner');
-    if (banner) {
-      banner.style.display = 'block';
-      setTimeout(() => {
-        banner.classList.add('show');
-      }, 100);
+    if (!banner) {
+      // Si le bandeau n'existe pas encore, réessayer après un court délai
+      setTimeout(() => this.showBanner(), 100);
+      return;
     }
+    
+    // S'assurer que le bandeau est visible
+    banner.style.display = 'block';
+    banner.style.visibility = 'visible';
+    
+    // Forcer le reflow pour que le navigateur applique display: block
+    banner.offsetHeight;
+    
+    // Ajouter la classe show pour l'animation
+    setTimeout(() => {
+      banner.classList.add('show');
+    }, 10);
   }
 
   /**
@@ -203,13 +214,29 @@ class CookieManager {
 // Initialiser le gestionnaire de cookies
 const cookieManager = new CookieManager();
 
-// Gestion des boutons du bandeau
-document.addEventListener('DOMContentLoaded', () => {
+// Fonction d'initialisation du bandeau
+function initCookieBanner() {
+  // Ne pas afficher le bandeau sur la page de gestion des cookies
+  if (window.location.pathname.includes('gestion-cookies')) {
+    // Charger les scripts selon le consentement existant même sur cette page
+    if (cookieManager.hasConsent()) {
+      cookieManager.loadScripts(cookieManager.consent);
+    }
+    return;
+  }
+
   const banner = document.getElementById('cookie-banner');
   
-  if (!cookieManager.hasConsent() && banner) {
+  if (!banner) {
+    // Si le bandeau n'existe pas encore, réessayer après un court délai
+    setTimeout(initCookieBanner, 100);
+    return;
+  }
+  
+  // Vérifier le consentement et afficher le bandeau si nécessaire
+  if (!cookieManager.hasConsent()) {
     cookieManager.showBanner();
-  } else if (cookieManager.hasConsent()) {
+  } else {
     // Charger les scripts selon le consentement existant
     cookieManager.loadScripts(cookieManager.consent);
   }
@@ -217,7 +244,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bouton "Tout accepter"
   const acceptAllBtn = document.getElementById('cookie-accept-all');
   if (acceptAllBtn) {
-    acceptAllBtn.addEventListener('click', () => {
+    // Supprimer les listeners existants pour éviter les doublons
+    acceptAllBtn.replaceWith(acceptAllBtn.cloneNode(true));
+    const newAcceptBtn = document.getElementById('cookie-accept-all');
+    newAcceptBtn.addEventListener('click', () => {
       cookieManager.saveConsent({
         analytics: true,
         marketing: true
@@ -228,7 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bouton "Tout refuser"
   const rejectAllBtn = document.getElementById('cookie-reject-all');
   if (rejectAllBtn) {
-    rejectAllBtn.addEventListener('click', () => {
+    rejectAllBtn.replaceWith(rejectAllBtn.cloneNode(true));
+    const newRejectBtn = document.getElementById('cookie-reject-all');
+    newRejectBtn.addEventListener('click', () => {
       cookieManager.saveConsent({
         analytics: false,
         marketing: false
@@ -239,7 +271,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bouton "Personnaliser"
   const customizeBtn = document.getElementById('cookie-customize');
   if (customizeBtn) {
-    customizeBtn.addEventListener('click', () => {
+    customizeBtn.replaceWith(customizeBtn.cloneNode(true));
+    const newCustomizeBtn = document.getElementById('cookie-customize');
+    newCustomizeBtn.addEventListener('click', () => {
       // Récupérer BASE_URL depuis un lien existant ou utiliser le chemin relatif
       const sitemapLink = document.querySelector('a[href*="sitemap"]');
       if (sitemapLink) {
@@ -251,7 +285,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
+}
+
+// Initialiser dès que le DOM est prêt
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCookieBanner);
+} else {
+  // DOM déjà chargé
+  initCookieBanner();
+}
+
+// Fallback : réessayer après un délai supplémentaire au cas où
+setTimeout(() => {
+  const banner = document.getElementById('cookie-banner');
+  if (banner && !cookieManager.hasConsent() && banner.style.display === 'none') {
+    cookieManager.showBanner();
+  }
+}, 500);
 
 // Export pour utilisation dans d'autres scripts
 if (typeof module !== 'undefined' && module.exports) {
