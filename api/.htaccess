@@ -1,0 +1,10 @@
+# Protection du dossier API
+# Empêcher l'accès direct aux fichiers API
+
+# Empêcher l'affichage de la liste des fichiers
+Options -Indexes
+
+# Autoriser seulement les requêtes POST pour certains endpoints
+<FilesMatch "^(send|comments)\.php$">
+    # Les vérifications de méthode HTTP sont faites dans le code PHP
+</FilesMatch>

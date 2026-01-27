@@ -22,15 +22,71 @@
       }
     });
 
-    // 👉 Sous-menu mobile uniquement
+    // 👉 Sous-menu mobile avec hover et clic
     const submenuLinks = document.querySelectorAll('.submenu-toggle');
+    const hasSubmenus = document.querySelectorAll('.has-submenu');
+    let hoverTimeout = null;
 
+    // Annuler le délai de fermeture si on survole n'importe quel élément du menu
+    mainNav.addEventListener('mouseenter', function () {
+      if (hoverTimeout) {
+        clearTimeout(hoverTimeout);
+        hoverTimeout = null;
+      }
+    });
+
+    // Fermer le sous-menu seulement si on quitte complètement la zone du menu
+    mainNav.addEventListener('mouseleave', function () {
+      if (window.innerWidth <= 1024 && mainNav.classList.contains('open')) {
+        hoverTimeout = setTimeout(() => {
+          document.querySelectorAll('.submenu.open').forEach((openMenu) => {
+            openMenu.classList.remove('open');
+          });
+        }, 200);
+      }
+    });
+
+    // Gestion du hover pour un affichage immédiat
+    hasSubmenus.forEach((submenuItem) => {
+      const submenu = submenuItem.querySelector('.submenu');
+      if (!submenu) return;
+
+      // Ouvrir au hover
+      submenuItem.addEventListener('mouseenter', function () {
+        if (window.innerWidth <= 1024 && mainNav.classList.contains('open')) {
+          // Annuler tout délai de fermeture en cours
+          if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = null;
+          }
+
+          // Fermer les autres sous-menus pour éviter les overlaps
+          document.querySelectorAll('.submenu.open').forEach((openMenu) => {
+            if (openMenu !== submenu) openMenu.classList.remove('open');
+          });
+
+          // Ouvrir le sous-menu immédiatement
+          submenu.classList.add('open');
+        }
+      });
+
+      // Garder ouvert si on survole le sous-menu lui-même
+      submenu.addEventListener('mouseenter', function () {
+        if (hoverTimeout) {
+          clearTimeout(hoverTimeout);
+          hoverTimeout = null;
+        }
+      });
+    });
+
+    // Gestion du clic comme alternative (fallback)
     submenuLinks.forEach((link) => {
       link.addEventListener('click', function (e) {
         if (window.innerWidth <= 1024) {
           e.preventDefault();
 
           const submenu = link.nextElementSibling;
+          if (!submenu) return;
 
           // Fermer les autres sous-menus pour éviter les overlaps
           document.querySelectorAll('.submenu.open').forEach((openMenu) => {

@@ -1,0 +1,162 @@
+/* ============================================
+   PAGES LÉGALES — DESIGN ÉPURÉ DEBARENOV
+============================================ */
+
+.legal-content-section {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.legal-content-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   TYPOGRAPHIE
+============================================ */
+
+.legal-content-section h2 {
+  font-family: var(--font-title);
+  font-size: var(--h2-size);
+  font-weight: var(--fw-bold);
+  color: var(--black);
+  margin: 3rem 0 1.5rem 0;
+  line-height: var(--lh-title);
+}
+
+.legal-content-section h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-content-section h3 {
+  font-family: var(--font-title);
+  font-size: var(--h3-size);
+  font-weight: var(--fw-bold);
+  color: var(--black);
+  margin: 2.5rem 0 1rem 0;
+  line-height: var(--lh-title);
+}
+
+.legal-content-section p {
+  font-family: var(--font-text);
+  font-size: var(--text-size);
+  line-height: var(--lh-default);
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   LISTES
+============================================ */
+
+.legal-content-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.legal-content-section ul li {
+  font-family: var(--font-text);
+  font-size: var(--text-size);
+  line-height: var(--lh-default);
+  color: var(--black);
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.legal-content-section ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--anthracite);
+  font-weight: bold;
+}
+
+.legal-content-section ol {
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.legal-content-section ol li {
+  font-family: var(--font-text);
+  font-size: var(--text-size);
+  line-height: var(--lh-default);
+  color: var(--black);
+  margin-bottom: 0.8rem;
+}
+
+/* ============================================
+   LIENS
+============================================ */
+
+.legal-content-section a {
+  color: var(--anthracite);
+  text-decoration: underline;
+  transition: color 0.25s ease;
+}
+
+.legal-content-section a:hover {
+  color: var(--black);
+}
+
+/* ============================================
+   SITEMAP — LISTE DE LIENS
+============================================ */
+
+.sitemap-list {
+  margin: 2rem 0;
+}
+
+.sitemap-list h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.sitemap-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sitemap-list ul li {
+  margin-bottom: 0.6rem;
+}
+
+.sitemap-list ul li a {
+  color: var(--anthracite);
+  text-decoration: none;
+  font-size: var(--text-size);
+  transition: color 0.25s ease;
+  display: inline-block;
+}
+
+.sitemap-list ul li a:hover {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 768px) {
+  .legal-content-section {
+    padding: 3rem 0;
+  }
+
+  .legal-content-section h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .legal-content-section h3 {
+    font-size: 1.3rem;
+    margin: 2rem 0 0.8rem 0;
+  }
+
+  .legal-content-section .container {
+    padding: 0 1.5rem;
+  }
+}

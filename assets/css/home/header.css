@@ -142,11 +142,6 @@
    MOBILE & TABLET
 ============================================ */
 @media (max-width: 1024px) {
-  /* Désactive le hover sur mobile/tablette */
-  .has-submenu:hover > .submenu {
-    display: none !important;
-  }
-
   .submenu {
     position: static;
     display: none;
@@ -154,9 +149,18 @@
     border-radius: 5px;
     box-shadow: none;
     padding-left: 0;
+    margin-top: 0.5rem;
   }
 
+  /* Permettre le hover en mode mobile/burger */
+  .has-submenu:hover > .submenu,
   .submenu.open {
+    display: block !important;
+  }
+
+  /* Garder le sous-menu visible pendant le hover sur les éléments enfants */
+  .has-submenu:hover .submenu,
+  .submenu:hover {
     display: block !important;
   }
 

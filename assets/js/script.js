@@ -11,6 +11,8 @@ import './home/services.js';
 import './pages/renovation.js';
 import './pages/devis.js';
 import './blog/articles.js';
+import './cookies.js';
+import './scroll-to-top.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   /* ANIMATIONS AU SCROLL */

@@ -4,7 +4,10 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <title>DEBARENOV – Rénovation, Débarras & Remise en état</title>
+      <title><?= isset($metaTitle) ? htmlspecialchars($metaTitle) : 'DEBARENOV – Rénovation, Débarras & Remise en état' ?></title>
+      <meta name="description" content="<?= isset($metaDesc) ? htmlspecialchars($metaDesc) : 'Rénovation intérieure, débarras et nettoyage en Île-de-France.' ?>" />
+
+      <!-- Google Analytics sera chargé dynamiquement après consentement (voir cookies.js) -->
 
       <!-- Polices -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,6 +55,8 @@
               <li><a href="<?= $BASE_URL ?>debarras">Débarras</a></li>
               <li><a href="<?= $BASE_URL ?>renovation">Rénovation</a></li>
               <li><a href="<?= $BASE_URL ?>nettoyage">Nettoyage</a></li>
+              <li><a href="<?= $BASE_URL ?>vider-maison-apres-deces">Vider maison après décès</a></li>
+              <li><a href="<?= $BASE_URL ?>debarras-succession">Débarras succession</a></li>
             </ul>
           </li>
 

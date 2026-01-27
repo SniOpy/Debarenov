@@ -1,0 +1,10 @@
+# Protection du dossier admin
+# Empêcher l'accès direct sans authentification
+
+<FilesMatch "\.php$">
+    # Vous pouvez ajouter une authentification ici si nécessaire
+    # Pour l'instant, la sécurité est gérée par le token dans cache.php
+</FilesMatch>
+
+# Empêcher l'affichage de la liste des fichiers
+Options -Indexes
