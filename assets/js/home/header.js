@@ -46,7 +46,7 @@
       }
     });
 
-    // Gestion du hover pour un affichage immédiat
+    // Gestion du hover pour un affichage immédiat (tous niveaux de sous-menus)
     hasSubmenus.forEach((submenuItem) => {
       const submenu = submenuItem.querySelector('.submenu');
       if (!submenu) return;
@@ -60,10 +60,19 @@
             hoverTimeout = null;
           }
 
-          // Fermer les autres sous-menus pour éviter les overlaps
-          document.querySelectorAll('.submenu.open').forEach((openMenu) => {
-            if (openMenu !== submenu) openMenu.classList.remove('open');
-          });
+          // Fermer les autres sous-menus du même niveau pour éviter les overlaps
+          const parentSubmenu = submenuItem.closest('.submenu');
+          if (parentSubmenu) {
+            // Si c'est un sous-menu de niveau 2, fermer les autres sous-menus de niveau 2 du même parent
+            parentSubmenu.querySelectorAll('.has-submenu > .submenu.open').forEach((openMenu) => {
+              if (openMenu !== submenu) openMenu.classList.remove('open');
+            });
+          } else {
+            // Si c'est un sous-menu de niveau 1, fermer les autres sous-menus de niveau 1
+            document.querySelectorAll('.main-nav > ul > .has-submenu > .submenu.open').forEach((openMenu) => {
+              if (openMenu !== submenu) openMenu.classList.remove('open');
+            });
+          }
 
           // Ouvrir le sous-menu immédiatement
           submenu.classList.add('open');

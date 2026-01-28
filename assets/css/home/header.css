@@ -105,7 +105,7 @@
   position: absolute;
   top: 100%; /* Supprime l’espace mort */
   left: 0;
-  display: none;
+  display: none !important;
   flex-direction: column;
   background: var(--white);
   min-width: 220px;
@@ -114,10 +114,34 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   list-style: none;
   z-index: 1100;
+  /* Zone de transition invisible pour faciliter le passage de la souris */
+  margin-top: 0.5rem;
 }
 
-.has-submenu:hover > .submenu {
-  display: block;
+/* Zone de connexion invisible entre le parent et le sous-menu (niveau 1 uniquement) */
+.main-nav > ul > .has-submenu::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  background: transparent;
+  z-index: 1099;
+}
+
+/* Desktop uniquement : afficher au hover */
+@media (min-width: 1025px) {
+  /* Maintenir le menu ouvert quand on survole le parent OU le sous-menu */
+  .has-submenu:hover > .submenu,
+  .has-submenu .submenu:hover {
+    display: block !important;
+  }
+  
+  /* Maintenir le sous-menu ouvert quand on survole un élément à l'intérieur */
+  .submenu:hover {
+    display: block !important;
+  }
 }
 
 .submenu li a {
@@ -129,6 +153,50 @@
 .submenu li a:hover {
   background: var(--gris-clair);
   color: var(--noir);
+}
+
+/* ============================================
+   SOUS-MENUS NIVEAU 2 (IMBRIQUÉS)
+============================================ */
+.submenu-level-2 {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: 0.5rem;
+  z-index: 1200;
+  /* Zone de transition pour le sous-menu niveau 2 */
+  margin-top: 0;
+}
+
+/* Zone de connexion pour les sous-menus niveau 2 */
+.submenu .has-submenu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0.5rem;
+  height: 100%;
+  background: transparent;
+  z-index: 1199;
+}
+
+/* Desktop : afficher le sous-menu niveau 2 au hover */
+@media (min-width: 1025px) {
+  /* Maintenir le sous-menu niveau 2 ouvert quand on survole le parent OU le sous-menu */
+  .submenu .has-submenu:hover > .submenu-level-2,
+  .submenu .has-submenu .submenu-level-2:hover {
+    display: block !important;
+  }
+  
+  /* Maintenir le sous-menu niveau 2 ouvert quand on survole un élément à l'intérieur */
+  .submenu-level-2:hover {
+    display: block !important;
+  }
+  
+  /* Éviter que le sous-menu niveau 2 sorte de l'écran */
+  .submenu .has-submenu {
+    position: relative;
+  }
 }
 
 /* ============================================
@@ -162,6 +230,14 @@
   .has-submenu:hover .submenu,
   .submenu:hover {
     display: block !important;
+  }
+
+  /* Sous-menus niveau 2 en mobile : affichage en cascade */
+  .submenu-level-2 {
+    position: static;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
   }
 
   .submenu li a {
