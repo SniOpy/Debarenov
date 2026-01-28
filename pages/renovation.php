@@ -37,7 +37,7 @@
     </div>
 
     <div class="about-image">
-      <img src="./assets/img/renovation/renovation-1.png" alt="Travaux de rénovation intérieure" />
+      <img src="<?= $BASE_URL ?>assets/img/renovation/renovation-1.png" alt="Travaux de rénovation intérieure" loading="lazy" decoding="async" />
     </div>
 
   </div>

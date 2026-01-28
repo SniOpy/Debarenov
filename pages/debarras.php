@@ -37,7 +37,7 @@
     </div>
 
     <div class="about-image">
-      <img src="./assets/img/about/debarras-appartement.jpg" alt="Débarras appartement" />
+      <img src="<?= $BASE_URL ?>assets/img/about/debarras-appartement.jpg" alt="Débarras appartement" loading="lazy" decoding="async" />
     </div>
 
   </div>

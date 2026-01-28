@@ -4,6 +4,7 @@
   src: url('./Ranade-Light.woff2') format('woff2'), url('./Ranade-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Ranade Regular = 400 */
@@ -12,6 +13,7 @@
   src: url('./Ranade-Regular.woff2') format('woff2'), url('./Ranade-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Ranade Bold = 700 */
@@ -20,4 +22,5 @@
   src: url('./Ranade-Bold.woff2') format('woff2'), url('./Ranade-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }

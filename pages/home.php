@@ -65,7 +65,7 @@
 
           <!-- IMAGE -->
           <div class="about-image">
-            <img src="./assets/img/about/chambre-minimaliste.jpg" alt="" />
+            <img src="<?= $BASE_URL ?>assets/img/about/chambre-minimaliste.jpg" alt="" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -217,7 +217,7 @@
           </div>
 
           <div class="copro-right">
-            <img src="./assets/img/copro/structure-architecturale.webp" alt="Immeuble syndic" />
+            <img src="<?= $BASE_URL ?>assets/img/copro/structure-architecturale.webp" alt="Immeuble syndic" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -226,7 +226,7 @@
         SEPARATOR 
   =========================== -->
       <div class="dark-separator">
-        <img src="./assets/img/asset-2.svg" alt="Débarenov Logo" class="separator-logo" data-anim="fade-top"/>
+        <img src="<?= $BASE_URL ?>assets/img/asset-2.svg" alt="Débarenov Logo" class="separator-logo" data-anim="fade-top"/>
       </div>
       <!-- ===========================
       REASONS – Pourquoi DEBARENOV
@@ -345,8 +345,8 @@
 
         <!-- ===== SLIDER 1 ===== -->
         <div class="before-after-container">
-          <img src="./assets/img/gallery/2.jpg" class="before-img" alt="avant" />
-          <img src="./assets/img/gallery/1.jpg" class="after-img" alt="après" />
+          <img src="<?= $BASE_URL ?>assets/img/gallery/2.jpg" class="before-img" alt="avant" loading="lazy" decoding="async" />
+          <img src="<?= $BASE_URL ?>assets/img/gallery/1.jpg" class="after-img" alt="après" loading="lazy" decoding="async" />
           <div class="slider-bar"></div>
           <div class="slider-handle"></div>
           <span class="label label-avant">AVANT</span>
@@ -355,8 +355,8 @@
 
         <!-- ===== SLIDER 2 ===== -->
         <div class="before-after-container">
-          <img src="./assets/img/gallery/6.png" class="before-img" alt="avant" />
-          <img src="./assets/img/gallery/3.jpg" class="after-img" alt="après" />
+          <img src="<?= $BASE_URL ?>assets/img/gallery/6.png" class="before-img" alt="avant" loading="lazy" decoding="async" />
+          <img src="<?= $BASE_URL ?>assets/img/gallery/3.jpg" class="after-img" alt="après" loading="lazy" decoding="async" />
           <div class="slider-bar"></div>
           <div class="slider-handle"></div>
           <span class="label label-avant">AVANT</span>
@@ -365,8 +365,8 @@
 
         <!-- ===== SLIDER 3 ===== -->
         <div class="before-after-container">
-          <img src="./assets/img/gallery/4.png" class="after-img" alt="après" />
-          <img src="./assets/img/gallery/5.png" class="before-img" alt="avant" />
+          <img src="<?= $BASE_URL ?>assets/img/gallery/4.png" class="after-img" alt="après" loading="lazy" decoding="async" />
+          <img src="<?= $BASE_URL ?>assets/img/gallery/5.png" class="before-img" alt="avant" loading="lazy" decoding="async" />
           <div class="slider-bar"></div>
           <div class="slider-handle"></div>
           <span class="label label-avant">AVANT</span>
@@ -396,7 +396,7 @@
         <!-- Article 1 -->
         <article class="blog-card" data-anim="fade-up">
           <div class="blog-img">
-            <img src="./assets/img/blog/1.jpg" alt="Nettoyage de printemps" />
+            <img src="<?= $BASE_URL ?>assets/img/blog/1.jpg" alt="Nettoyage de printemps" loading="lazy" decoding="async" />
           </div>
           <div class="blog-content">
             <h3>5 astuces pour un nettoyage de printemps réussi</h3>
@@ -408,7 +408,7 @@
         <!-- Article 2 -->
         <article class="blog-card" data-anim="fade-up">
           <div class="blog-img">
-            <img src="./assets/img/blog/1.png" alt="Professionnel du débarras" />
+            <img src="<?= $BASE_URL ?>assets/img/blog/1.png" alt="Professionnel du débarras" />
           </div>
           <div class="blog-content">
             <h3>Pourquoi faire appel à un professionnel du débarras ?</h3>
@@ -420,7 +420,7 @@
         <!-- Article 3 -->
         <article class="blog-card" data-anim="fade-up">
           <div class="blog-img">
-            <img src="./assets/img/blog/3.png" alt="Rénovation salon" />
+            <img src="<?= $BASE_URL ?>assets/img/blog/3.png" alt="Rénovation salon" loading="lazy" decoding="async" />
           </div>
           <div class="blog-content">
             <h3>Rénover son salon : les erreurs à éviter</h3>
@@ -446,7 +446,7 @@
     <div class="container">
 
       <div class="reviews-header">
-        <img src="./assets/img/icons/google.png" class="google-logo" alt="Google logo" />
+        <img src="<?= $BASE_URL ?>assets/img/icons/google.png" class="google-logo" alt="Google logo" />
         <h2 class="reviews-title">Ils nous ont fait confiance</h2>
         <p class="reviews-subtitle">Avis vérifiés de nos clients Debarenov</p>
       </div>
@@ -456,11 +456,11 @@
         <!-- Review 1 -->
         <div class="review-card" data-anim="fade">
           <div class="stars">
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
           </div>
           <p class="review-text">
             Un travail fait dans la règle de l’art. Le résultat correspondait aux attentes.
@@ -472,11 +472,11 @@ Nous avons récupéré le bien propre et dans les délais annoncés au départ.
         <!-- Review 2 -->
         <div class="review-card" data-anim="fade">
           <div class="stars">
-            <img src="../assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
           </div>
           <p class="review-text">
             Entreprise très sérieuse et professionnelle. Les travaux sont de grande qualité, réalisés dans les délais et avec beaucoup de soin. Je recommande vivement !
@@ -487,11 +487,11 @@ Nous avons récupéré le bien propre et dans les délais annoncés au départ.
         <!-- Review 3 -->
         <div class="review-card" data-anim="fade">
           <div class="stars">
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
-            <img src="./assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
+            <img src="<?= $BASE_URL ?>assets/img/icons/star.svg" />
           </div>
           <p class="review-text">
             Debarenov est une société très professionnelle et compétente. Multi fonction, j ai pour ma part, fait appel à eux pour repeindre une maison dans sa totalité. Travail très bien fait en respectant le délais. Je recommande vivement. Merci à toute l équipe

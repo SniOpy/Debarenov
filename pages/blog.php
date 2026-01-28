@@ -51,6 +51,8 @@ if (!$articles || !is_array($articles)) {
             <img
               src="<?= htmlspecialchars($article['image']) ?>"
               alt="<?= htmlspecialchars($article['title']) ?>"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

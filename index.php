@@ -12,13 +12,6 @@ try {
     $uri  = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $path = trim($uri, '/');
 
-    // Local (WAMP) → on retire /debarenov
-    $base = 'debarenov';
-    if (strpos($path, $base) === 0) {
-    $path = trim(substr($path, strlen($base)), '/');
-}
-
-
     $page = $path === '' ? 'home' : $path;
 
     // -------- Pages autorisées --------

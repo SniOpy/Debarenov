@@ -22,7 +22,7 @@
 
       <!-- COLONNE 2 : LOGO + PHRASE -->
       <div class="footer-column footer-center">
-        <img src="./assets/img/asset-2.svg" alt="Debarenov logo" class="footer-logo" />
+        <img src="/assets/img/asset-2.svg" alt="Debarenov logo" class="footer-logo" />
         <p class="footer-tagline">
           Débarras • Nettoyage  • Rénovation • Remise en état
           
@@ -88,6 +88,6 @@
   </div>
 
    <!-- SCRIPTS -->
-    <script src="./assets/js/script.js" type="module"></script>
+    <script src="<?= $BASE_URL ?>assets/js/script.js" type="module" defer></script>
 </body>
 </html>

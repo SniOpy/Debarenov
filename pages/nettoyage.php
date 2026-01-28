@@ -37,7 +37,7 @@
     </div>
 
     <div class="about-image">
-      <img src="./assets/img/nettoyage/nettoyage.png" alt="Nettoyage professionnel" />
+      <img src="<?= $BASE_URL ?>assets/img/nettoyage/nettoyage.png" alt="Nettoyage professionnel" loading="lazy" decoding="async" />
     </div>
 
   </div>
