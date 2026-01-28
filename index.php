@@ -12,6 +12,21 @@ try {
     $uri  = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $path = trim($uri, '/');
 
+    // Debug mode développement
+    if (ini_get('display_errors')) {
+        echo "<!-- DEBUG: URI = " . htmlspecialchars($uri) . " -->\n";
+        echo "<!-- DEBUG: Path = " . htmlspecialchars($path) . " -->\n";
+    }
+
+    // Local (WAMP) → retirer /debarenov du path
+    $base = 'debarenov';
+    if (strpos($path, $base) === 0) {
+        $path = trim(substr($path, strlen($base)), '/');
+        if (ini_get('display_errors')) {
+            echo "<!-- DEBUG: Path après retrait de /debarenov = " . htmlspecialchars($path) . " -->\n";
+        }
+    }
+
     $page = $path === '' ? 'home' : $path;
 
     // -------- Pages autorisées --------
@@ -77,6 +92,12 @@ try {
             'desc'  => 'Gérez vos préférences de cookies et de confidentialité.'
         ],
     ];
+
+    // Debug mode développement (après définition de $pages)
+    if (ini_get('display_errors')) {
+        echo "<!-- DEBUG: Page finale = " . htmlspecialchars($page) . " -->\n";
+        echo "<!-- DEBUG: Page existe ? " . (array_key_exists($page, $pages) ? 'OUI' : 'NON') . " -->\n";
+    }
 
     // -------- Détection 404 --------
     $is404 = !array_key_exists($page, $pages);
