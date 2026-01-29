@@ -91,7 +91,7 @@
                   <li><a href="<?= $BASE_URL ?>debarras-grenier-cave">Cave et Grenier</a></li>
                   <li><a href="<?= $BASE_URL ?>debarras-encombrant">Encombrants</a></li>
                   <li><a href="<?= $BASE_URL ?>debarras-diogenes">Diogènes</a></li>
-                  <li><a href="<?= $BASE_URL ?>debarras-gravat">Gravats</a></li>
+                  <li><a href="<?= $BASE_URL ?>debarras-gravats">Gravats</a></li>
                   <li><a href="<?= $BASE_URL ?>debarras">Maisons et appartements</a></li>
                   <li><a href="<?= $BASE_URL ?>debarras-succession">Succession</a></li>
                   <li><a href="<?= $BASE_URL ?>vider-maison-apres-deces">Videz maison après décès</a></li>
@@ -107,6 +107,15 @@
                 </ul>
               </li>
               <li><a href="<?= $BASE_URL ?>renovation">Rénovation</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <a href="#" class="submenu-toggle">Tarifs ></a>
+            <ul class="submenu">
+              <li><a href="<?= $BASE_URL ?>tarifs-appartement">Tarifs appartement</a></li>
+              <li><a href="<?= $BASE_URL ?>tarifs-maison">Tarifs maison</a></li>
+              <li><a href="<?= $BASE_URL ?>devis">Demander un devis</a></li>
             </ul>
           </li>
 

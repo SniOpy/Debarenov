@@ -63,7 +63,7 @@ try {
             'title' => 'Débarras Diogènes | DEBARENOV',
             'desc'  => 'Intervention spécialisée et bienveillante pour débarras de logements encombrés de manière compulsive.'
         ],
-        'debarras-gravat' => [
+        'debarras-gravats' => [
             'title' => 'Débarras gravats | DEBARENOV',
             'desc'  => 'Évacuation rapide et conforme de vos gravats et déchets de chantier. Intervention sous 48h.'
         ],
@@ -83,9 +83,33 @@ try {
             'title' => 'Nettoyage appartement | DEBARENOV',
             'desc'  => 'Nettoyage complet et professionnel de votre appartement. Idéal avant emménagement ou après travaux.'
         ],
+        'nettoyage-apres-demenagement' => [
+            'title' => 'Nettoyage après déménagement | DEBARENOV',
+            'desc'  => 'Nettoyage complet après déménagement pour remettre votre logement en état. Intervention rapide sous 24-48h.'
+        ],
         'syndic-et-copro' => [
             'title' => 'Syndic & Copropriétés | DEBARENOV',
             'desc'  => 'Services professionnels pour syndics et copropriétés : débarras, nettoyage, rénovation et remise en état.'
+        ],
+        'prix-debarras' => [
+            'title' => 'Tarifs débarras | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour nos services de débarras. Devis gratuit et personnalisé.'
+        ],
+        'tarif-nettoyage' => [
+            'title' => 'Tarifs nettoyage | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour nos services de nettoyage professionnel. Devis gratuit.'
+        ],
+        'prix-debarras-maison' => [
+            'title' => 'Prix débarras maison et appartement | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour le débarras de maison et appartement. Devis gratuit et personnalisé.'
+        ],
+        ' ' => [
+            'title' => 'Tarifs débarras appartement | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour le débarras d\'appartement. Devis gratuit et personnalisé.'
+        ],
+        'tarifs-maison' => [
+            'title' => 'Tarifs débarras maison | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour le débarras de maison. Devis gratuit et personnalisé.'
         ],
         'remise-en-etat' => [
             'title' => 'Remise en état après sinistre | DEBARENOV',

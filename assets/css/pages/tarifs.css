@@ -1,0 +1,237 @@
+/* ============================================
+   TARIFS — TABLEAUX ESTHÉTIQUES ET ÉPURÉS
+============================================ */
+
+.tarifs-section {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.tarifs-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.tarifs-header .tag {
+  display: inline-block;
+  background: var(--anthracite);
+  color: #fff;
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-bottom: 1rem;
+}
+
+.tarifs-header h2 {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: #000;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tarifs-intro {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ============================================
+   TABLEAUX DE TARIFS
+============================================ */
+
+.tarifs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.tarif-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-family: 'Ranade', sans-serif;
+  min-width: 700px;
+}
+
+.tarif-table thead {
+  background: var(--anthracite);
+  color: #ffffff;
+}
+
+.tarif-table th {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  border: none;
+}
+
+.tarif-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.tarif-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.tarif-table tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+  transition: background-color 0.2s ease;
+}
+
+.tarif-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.tarif-table tbody tr:hover {
+  background: var(--gris-clair);
+}
+
+.tarif-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.tarif-table td {
+  padding: 1.2rem 1.5rem;
+  font-size: 0.95rem;
+  color: #333;
+  vertical-align: middle;
+}
+
+.tarif-table td:first-child {
+  font-weight: 600;
+  color: #000;
+}
+
+.tarif-table .tarif-price {
+  font-weight: 700;
+  color: var(--anthracite);
+  font-size: 1.05rem;
+}
+
+.tarif-table .difficulty-simple {
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.tarif-table .difficulty-moyen {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.tarif-table .difficulty-complexe {
+  color: #ef4444;
+  font-weight: 500;
+}
+
+/* ============================================
+   NOTES IMPORTANTES
+============================================ */
+
+.tarifs-notes {
+  background: var(--gris-clair);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.tarifs-notes h3 {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #000;
+  margin-bottom: 1.2rem;
+}
+
+.tarifs-notes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarifs-notes li {
+  font-family: 'Ranade', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tarifs-notes li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--anthracite);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 768px) {
+  .tarifs-header h2 {
+    font-size: 2rem;
+  }
+
+  .tarifs-intro {
+    font-size: 1rem;
+  }
+
+  .tarif-table-wrapper {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    border-radius: 0;
+  }
+
+  .tarif-table {
+    min-width: 600px;
+  }
+
+  .tarif-table th,
+  .tarif-table td {
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .tarifs-notes {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tarifs-section {
+    padding: 4rem 0;
+  }
+
+  .tarifs-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .tarif-table th,
+  .tarif-table td {
+    padding: 0.8rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
