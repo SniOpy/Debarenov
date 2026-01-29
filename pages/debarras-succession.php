@@ -46,7 +46,7 @@
     </div>
 
     <div class="about-image">
-      <img src="<?= $BASE_URL ?>assets/img/succession/debarras-succession.png" alt="Débarras succession après décès" loading="lazy" decoding="async" />
+      <img src="<?= $BASE_URL ?>assets/img/debarras/succession-immobiliere.png" alt="Débarras succession " loading="lazy" decoding="async" />
     </div>
 
   </div>

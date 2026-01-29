@@ -48,7 +48,7 @@
     </div>
 
     <div class="about-image">
-      <img src="<?= $BASE_URL ?>assets/img/about/debarras-appartement.jpg" alt="Débarras grenier et cave" loading="lazy" decoding="async" />
+      <img src="<?= $BASE_URL ?>assets/img/debarras/cave.png" alt="Débarras grenier et cave" loading="lazy" decoding="async" />
     </div>
 
   </div>
