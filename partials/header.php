@@ -81,16 +81,43 @@
             <a href="#services" class="submenu-toggle">Services ></a>
 
             <ul class="submenu">
-              <li><a href="<?= $BASE_URL ?>debarras">Débarras</a></li>
+              <li class="has-submenu">
+                <a href="#" class="submenu-toggle">Débarras ></a>
+                <ul class="submenu submenu-level-2">
+                  <li><a href="<?= $BASE_URL ?>debarras-garage">Garage</a></li>
+                  <li><a href="<?= $BASE_URL ?>debarras-grenier-cave">Cave et Grenier</a></li>
+                  <li><a href="<?= $BASE_URL ?>debarras-encombrant">Encombrants</a></li>
+                  <li><a href="<?= $BASE_URL ?>debarras-diogenes">Diogènes</a></li>
+                  <li><a href="<?= $BASE_URL ?>debarras-gravats">Gravats</a></li>
+                  <li><a href="<?= $BASE_URL ?>debarras">Maisons et appartements</a></li>
+                  <li><a href="<?= $BASE_URL ?>debarras-succession">Succession</a></li>
+                  <li><a href="<?= $BASE_URL ?>vider-maison-apres-deces">Videz maison après décès</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a href="#" class="submenu-toggle">Nettoyage ></a>
+                <ul class="submenu submenu-level-2">
+                  <li><a href="<?= $BASE_URL ?>nettoyage-maison">Maison</a></li>
+                  <li><a href="<?= $BASE_URL ?>nettoyage">Professionnel</a></li>
+                  <li><a href="<?= $BASE_URL ?>nettoyage-appartement">Appartements</a></li>
+                  <li><a href="<?= $BASE_URL ?>syndic-et-copro">Syndic & copropriétés</a></li>
+                </ul>
+              </li>
               <li><a href="<?= $BASE_URL ?>renovation">Rénovation</a></li>
-              <li><a href="<?= $BASE_URL ?>nettoyage">Nettoyage</a></li>
-              <li><a href="<?= $BASE_URL ?>vider-maison-apres-deces">Vider maison après décès</a></li>
-              <li><a href="<?= $BASE_URL ?>debarras-succession">Débarras succession</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <a href="#" class="submenu-toggle">Tarifs ></a>
+            <ul class="submenu">
+              <li><a href="<?= $BASE_URL ?>tarifs-appartement">Tarifs appartement</a></li>
+              <li><a href="<?= $BASE_URL ?>tarifs-maison">Tarifs maison</a></li>
+              <li><a href="<?= $BASE_URL ?>devis">Demander un devis</a></li>
             </ul>
           </li>
 
           <!-- ancres internes → OK -->
-          <li><a href="<?= $BASE_URL ?>#copro-debarenov">Syndic & Copro</a></li>
+          <li><a href="<?= $BASE_URL ?>syndic-et-copro">Syndic & Copro</a></li>
           <li><a href="<?= $BASE_URL ?>blog">Blog</a></li>
           <li><a href="<?= $BASE_URL ?>#contact-form">Contact</a></li>
         </ul>

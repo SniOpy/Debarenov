@@ -15,7 +15,7 @@
 
         <h4>Liens utiles</h4>
         <ul>
-          <li><a href="<?= $BASE_URL ?>#copro-debarenov">Syndics & Copropriétés</a></li>
+          <li><a href="<?= $BASE_URL ?>syndic-et-copro">Syndics & Copropriétés</a></li>
           <li><a href="<?= $BASE_URL ?>#reviews">Avis clients</a></li>
         </ul>
       </div>

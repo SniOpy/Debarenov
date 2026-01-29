@@ -47,6 +47,26 @@ try {
             'title' => 'Débarras professionnel | DEBARENOV',
             'desc'  => 'Débarras maison, appartement, cave, grenier…'
         ],
+        'debarras-grenier-cave' => [
+            'title' => 'Débarras grenier et cave | DEBARENOV',
+            'desc'  => 'Débarras de greniers et caves avec accès difficiles. Intervention spécialisée et sécurisée.'
+        ],
+        'debarras-garage' => [
+            'title' => 'Débarras garage | DEBARENOV',
+            'desc'  => 'Débarras complet de garage. Libérez votre espace de stockage rapidement et efficacement.'
+        ],
+        'debarras-encombrant' => [
+            'title' => 'Débarras encombrants | DEBARENOV',
+            'desc'  => 'Évacuation légale et responsable de vos encombrants. Intervention rapide sous 48h.'
+        ],
+        'debarras-diogenes' => [
+            'title' => 'Débarras Diogènes | DEBARENOV',
+            'desc'  => 'Intervention spécialisée et bienveillante pour débarras de logements encombrés de manière compulsive.'
+        ],
+        'debarras-gravats' => [
+            'title' => 'Débarras gravats | DEBARENOV',
+            'desc'  => 'Évacuation rapide et conforme de vos gravats et déchets de chantier. Intervention sous 48h.'
+        ],
         'renovation' => [
             'title' => 'Rénovation intérieure | DEBARENOV',
             'desc'  => 'Travaux de rénovation : sols, peinture, cuisine, salle de bain.'
@@ -54,6 +74,42 @@ try {
         'nettoyage' => [
             'title' => 'Nettoyage professionnel | DEBARENOV',
             'desc'  => 'Nettoyage fin de chantier et remise en propreté.'
+        ],
+        'nettoyage-maison' => [
+            'title' => 'Nettoyage maison | DEBARENOV',
+            'desc'  => 'Nettoyage complet et approfondi de votre maison. Remise en propre professionnelle.'
+        ],
+        'nettoyage-appartement' => [
+            'title' => 'Nettoyage appartement | DEBARENOV',
+            'desc'  => 'Nettoyage complet et professionnel de votre appartement. Idéal avant emménagement ou après travaux.'
+        ],
+        'nettoyage-apres-demenagement' => [
+            'title' => 'Nettoyage après déménagement | DEBARENOV',
+            'desc'  => 'Nettoyage complet après déménagement pour remettre votre logement en état. Intervention rapide sous 24-48h.'
+        ],
+        'syndic-et-copro' => [
+            'title' => 'Syndic & Copropriétés | DEBARENOV',
+            'desc'  => 'Services professionnels pour syndics et copropriétés : débarras, nettoyage, rénovation et remise en état.'
+        ],
+        'prix-debarras' => [
+            'title' => 'Tarifs débarras | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour nos services de débarras. Devis gratuit et personnalisé.'
+        ],
+        'tarif-nettoyage' => [
+            'title' => 'Tarifs nettoyage | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour nos services de nettoyage professionnel. Devis gratuit.'
+        ],
+        'prix-debarras-maison' => [
+            'title' => 'Prix débarras maison et appartement | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour le débarras de maison et appartement. Devis gratuit et personnalisé.'
+        ],
+        ' ' => [
+            'title' => 'Tarifs débarras appartement | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour le débarras d\'appartement. Devis gratuit et personnalisé.'
+        ],
+        'tarifs-maison' => [
+            'title' => 'Tarifs débarras maison | DEBARENOV',
+            'desc'  => 'Tarifs indicatifs pour le débarras de maison. Devis gratuit et personnalisé.'
         ],
         'remise-en-etat' => [
             'title' => 'Remise en état après sinistre | DEBARENOV',
