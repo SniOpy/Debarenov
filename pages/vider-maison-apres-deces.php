@@ -47,7 +47,7 @@
     </div>
 
     <div class="about-image">
-      <img src="<?= $BASE_URL ?>assets/img/succession/vider-appartement-maison.png" alt="Vider maison ou appartement après décès ou succession" loading="lazy" decoding="async" />
+      <img src="<?= $BASE_URL ?>assets/img/debarras/vider-apres-deces.png" alt="Vider maison ou appartement après décès ou succession" loading="lazy" decoding="async" />
     </div>
 
   </div>

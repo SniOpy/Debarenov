@@ -91,7 +91,7 @@
                   <li><a href="<?= $BASE_URL ?>debarras-diogenes">Diogènes</a></li>
                   <li><a href="<?= $BASE_URL ?>debarras-gravats">Gravats</a></li>
                   <li><a href="<?= $BASE_URL ?>debarras">Maisons et appartements</a></li>
-                  <li><a href="<?= $BASE_URL ?>debarras-succession">Succession</a></li>
+                  <li><a href="<?= $BASE_URL ?>debarras-succession">Succession immobilière</a></li>
                   <li><a href="<?= $BASE_URL ?>vider-maison-apres-deces">Videz maison après décès</a></li>
                 </ul>
               </li>

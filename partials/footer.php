@@ -22,7 +22,7 @@
 
       <!-- COLONNE 2 : LOGO + PHRASE -->
       <div class="footer-column footer-center">
-        <img src="/assets/img/asset-2.svg" alt="Debarenov logo" class="footer-logo" />
+        <img src="<?= $BASE_URL ?>assets/img/asset-2.svg" alt="Debarenov logo" class="footer-logo" />
         <p class="footer-tagline">
           Débarras • Nettoyage  • Rénovation • Remise en état
           
@@ -39,8 +39,10 @@
 
     </div>
 
+    <div class="footer-separator"></div>
+
     <div class="footer-bottom">
-      <p>© 2025 Debarenov – Tous droits réservés.</p>
+      <p>© 2025 Debarenov – Tous droits réservés. • Réalisé par <a href="https://www.madapes-agency.com">Madapes Agency</a></p>
       <div class="footer-legal-links">
         <a href="<?= $BASE_URL ?>sitemap">Plan du site</a>
         <a href="<?= $BASE_URL ?>conditions-generales">Conditions générales de service</a>
