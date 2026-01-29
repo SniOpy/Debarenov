@@ -136,7 +136,7 @@
 
     <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gris-clair); font-size: var(--text-small); color: var(--gris);">
       Pour toute question concernant les présentes conditions générales, vous pouvez nous contacter à l'adresse 
-      suivante : <a href="mailto:contact@debarenov.com">contact@debarenov.com</a>
+      suivante : <a href="mailto:contact@debarenov.fr">contact@debarenov.fr</a>
     </p>
 
   </div>

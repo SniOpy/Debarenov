@@ -13,20 +13,18 @@
       Le site <strong>debarenov.fr</strong> est édité par :
     </p>
     <p>
-      <strong>DEBARENOV</strong><br>
-      [Raison sociale / Nom de l'entreprise]<br>
-      [Forme juridique]<br>
-      [Numéro SIRET]<br>
-      [Adresse du siège social]
+      <strong>DEBARENOV SAS</strong><br>
+      919 449 389 00023<br>
+      13 RUE DE LILLE, 94700 MAISONS-ALFORT
     </p>
     <p>
       Téléphone : <a href="tel:+33148933946">01 48 93 39 46</a><br>
-      Email : <a href="mailto:contact@debarenov.com">contact@debarenov.com</a>
+      Email : <a href="mailto:contact@debarenov.fr">contact@debarenov.fr</a>
     </p>
 
     <h2>Directeur de publication</h2>
     <p>
-      Le directeur de publication est [Nom du directeur de publication], en qualité de [fonction].
+      Le directeur de publication est AMZIL.Y, en qualité de Président.
     </p>
 
     <h2>Hébergement</h2>
@@ -34,10 +32,10 @@
       Le site est hébergé par :
     </p>
     <p>
-      [Nom de l'hébergeur]<br>
-      [Adresse de l'hébergeur]<br>
-      Téléphone : [Numéro de téléphone]<br>
-      Site web : <a href="[URL hébergeur]" target="_blank" rel="noopener noreferrer">[URL hébergeur]</a>
+      Infomaniak<br>
+      Infomaniak Network SA, Rue Eugène Marziano 25, 1227 Les Acacias (GE)<br>
+      Téléphone : 022 767 67 67<br>
+      Site web : <a href="https://www.infomaniak.com/" target="_blank" rel="noopener noreferrer">https://www.infomaniak.com/</a>
     </p>
 
     <h2>Propriété intellectuelle</h2>
@@ -69,7 +67,7 @@
     </p>
     <p>
       Pour exercer ce droit, vous pouvez nous contacter à l'adresse : 
-      <a href="mailto:contact@debarenov.com">contact@debarenov.com</a>
+      <a href="mailto:contact@debarenov.fr">contact@debarenov.fr</a>
     </p>
     <p>
       Pour plus d'informations, consultez notre 
