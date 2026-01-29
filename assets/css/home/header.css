@@ -118,28 +118,9 @@
   margin-top: 0.5rem;
 }
 
-/* Zone de connexion invisible entre le parent et le sous-menu (niveau 1 uniquement) */
-.main-nav > ul > .has-submenu::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 0.5rem;
-  background: transparent;
-  z-index: 1099;
-}
-
 /* Desktop uniquement : afficher au hover */
 @media (min-width: 1025px) {
-  /* Maintenir le menu ouvert quand on survole le parent OU le sous-menu */
-  .has-submenu:hover > .submenu,
-  .has-submenu .submenu:hover {
-    display: block !important;
-  }
-  
-  /* Maintenir le sous-menu ouvert quand on survole un élément à l'intérieur */
-  .submenu:hover {
+  .has-submenu:hover > .submenu {
     display: block !important;
   }
 }

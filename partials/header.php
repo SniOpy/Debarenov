@@ -45,11 +45,8 @@
         .main-nav a{text-decoration:none;color:#000;font-weight:500;transition:color .3s}
         .main-nav a:hover{color:var(--anthracite)}
         .has-submenu{position:relative}
-        .main-nav>ul>.has-submenu::before{content:'';position:absolute;top:100%;left:0;right:0;height:0.5rem;background:transparent;z-index:1099}
-        .submenu{position:absolute;top:100%;left:0;display:none!important;flex-direction:column;background:var(--white);min-width:220px;padding:.5rem 0;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,.1);list-style:none;z-index:1100;margin-top:0.5rem}
-        @media (min-width:1025px){.has-submenu:hover>.submenu,.has-submenu .submenu:hover,.submenu:hover{display:block!important}}
-        .submenu-level-2{position:absolute;left:100%;top:0;margin-left:.5rem;z-index:1200}
-        @media (min-width:1025px){.submenu .has-submenu:hover>.submenu-level-2,.submenu .has-submenu .submenu-level-2:hover,.submenu-level-2:hover{display:block!important}}
+        .submenu{position:absolute;top:100%;left:0;display:none!important;flex-direction:column;background:var(--white);min-width:220px;padding:.5rem 0;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,.1);list-style:none;z-index:1100}
+        .has-submenu:hover>.submenu{display:block!important}
         .hero-debarenov{position:relative;width:100vw;height:95vh;left:50%;margin-left:-50vw;background:url('./assets/img/hero/salon-lumineux-noir.jpg') top/cover no-repeat;display:flex;align-items:center;overflow:hidden}
         @media (max-width:768px){.nav-toggle{display:flex}.main-nav{display:none}.main-nav.open{display:block}}
       </style>
