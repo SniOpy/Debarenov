@@ -82,7 +82,7 @@
     width: 0%;
     height: 2px;
     background: var(--noir);
-    transition: width 0.3s ease;
+    transition: width 0.7s ease;
   }
 
   .main-nav a:hover::after {
@@ -101,6 +101,20 @@
   position: relative;
 }
 
+/* Zone de transition invisible entre le lien parent et le sous-menu */
+@media (min-width: 1025px) {
+  .has-submenu::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+    background: transparent;
+    z-index: 1099;
+  }
+}
+
 .submenu {
   position: absolute;
   top: 100%; /* Supprime l’espace mort */
@@ -109,18 +123,20 @@
   flex-direction: column;
   background: var(--white);
   min-width: 220px;
-  padding: 0.5rem 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   list-style: none;
   z-index: 1100;
-  /* Zone de transition invisible pour faciliter le passage de la souris */
-  margin-top: 0.5rem;
 }
 
 /* Desktop uniquement : afficher au hover */
 @media (min-width: 1025px) {
-  .has-submenu:hover > .submenu {
+  .has-submenu:hover > .submenu,
+  .submenu:hover {
     display: block !important;
   }
 }

@@ -96,7 +96,7 @@
     </ul>
     <p>
       Pour exercer ces droits, vous pouvez nous contacter à l'adresse : 
-      <a href="mailto:contact@debarenov.com">contact@debarenov.com</a>
+      <a href="mailto:contact@debarenov.fr">contact@debarenov.fr</a>
     </p>
     <p>
       Vous disposez également du droit d'introduire une réclamation auprès de la Commission Nationale de 
@@ -170,14 +170,14 @@
     </p>
     <p>
       <strong>DEBARENOV</strong><br>
-      Email : <a href="mailto:contact@debarenov.com">contact@debarenov.com</a><br>
-      Téléphone : <a href="tel:+33148933946">01 48 93 39 46</a>
+      Email : <a href="mailto:contact@debarenov.fr">contact@debarenov.fr</a><br>
+      Téléphone : <a href="tel:+33148933946">01.48.93.39.46</a>
     </p>
     <p>
       <strong>Délégué à la protection des données</strong><br>
       Pour toute demande relative à vos droits ou à la protection de vos données, vous pouvez également 
       contacter notre délégué à la protection des données à l'adresse : 
-      <a href="mailto:dpo@debarenov.com">dpo@debarenov.com</a>
+      <a href="mailto:contact@debarenov.fr">contact@debarenov.fr</a>
     </p>
 
   </div>

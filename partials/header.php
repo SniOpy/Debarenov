@@ -45,8 +45,9 @@
         .main-nav a{text-decoration:none;color:#000;font-weight:500;transition:color .3s}
         .main-nav a:hover{color:var(--anthracite)}
         .has-submenu{position:relative}
-        .submenu{position:absolute;top:100%;left:0;display:none!important;flex-direction:column;background:var(--white);min-width:220px;padding:.5rem 0;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,.1);list-style:none;z-index:1100}
-        .has-submenu:hover>.submenu{display:block!important}
+        @media (min-width:1025px){.has-submenu::before{content:'';position:absolute;top:100%;left:0;right:0;height:.5rem;background:transparent;z-index:1099}}
+        .submenu{position:absolute;top:100%;left:0;display:none!important;flex-direction:column;background:var(--white);min-width:220px;padding-top:.5rem;padding-bottom:.5rem;padding-left:0;padding-right:0;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,.1);list-style:none;z-index:1100}
+        @media (min-width:1025px){.has-submenu:hover>.submenu,.submenu:hover{display:block!important}}
         .hero-debarenov{position:relative;width:100vw;height:95vh;left:50%;margin-left:-50vw;background:url('./assets/img/hero/salon-lumineux-noir.jpg') top/cover no-repeat;display:flex;align-items:center;overflow:hidden}
         @media (max-width:768px){.nav-toggle{display:flex}.main-nav{display:none}.main-nav.open{display:block}}
       </style>

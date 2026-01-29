@@ -111,6 +111,10 @@ try {
             'title' => 'Tarifs débarras maison | DEBARENOV',
             'desc'  => 'Tarifs indicatifs pour le débarras de maison. Devis gratuit et personnalisé.'
         ],
+        'tarifs-appartement' => [
+            'title' => 'Tarifs débarras appartement | DEBARENOV',
+            'desc'  => "Tarifs indicatifs pour le débarras d'appartement. Devis gratuit et personnalisé."
+        ],
         'remise-en-etat' => [
             'title' => 'Remise en état après sinistre | DEBARENOV',
             'desc'  => 'Intervention suite à sinistre, squat ou dégât des eaux.'
